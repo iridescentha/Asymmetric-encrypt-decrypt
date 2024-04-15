@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Asymmetric RSA Encryption/Decryption</h1>
+
+    <!-- RSA Key Generation Section -->
+    <h2>RSA Key Generation</h2>
+    <label for="keyLength">Select Key Length:</label>
+    <select class="keyLength">
+      <option value="512">512 bit</option>
+      <option value="1024">1024 bit</option>
+      <option value="2048">2048 bit</option>
+      <option value="3072">3072 bit</option>
+      <option value="4096">4096 bit</option>
+    </select>
+    <button class="generateBtn">Generate RSA Key</button><br><br>
+    <div style="display: flex;">
+        <div style="flex: 1;">
+          <h4>Public Key</h4>
+            <textarea class="publicKeyTextarea" rows="5" cols="50" readonly placeholder="Public Key" autocomplete="off"></textarea><br><br>
+        </div>
+        <div style="flex: 1;">
+          <h4>Private Key</h4>
+            <textarea class="privateKeyTextarea" rows="5" cols="50" readonly placeholder="Private Key" autocomplete="off"></textarea><br><br>
+        </div>
+    </div>
+  
+    <!-- RSA Encryption and Decryption Sections -->
+    <div style="display: flex;">
+      <div style="flex: 1;">
+        <h2>RSA Encryption</h2>
+        <h4>Enter Plain text to encrypt</h4>
+        <textarea class="plainTextInput" rows="5" cols="50" placeholder="Enter plaintext to encrypt" autocomplete="off"></textarea><br><br>
+        <h4>Enter public key</h4>
+        <textarea class="publicKeyInput" rows="5" cols="50" placeholder="Enter public key" autocomplete="off"></textarea>
+      </div>
+  
+      <div style="flex: 1;">
+        <h2>RSA Decryption</h2>
+        <h4>Enter Encrypted Text to Decrypt</h4>
+        <textarea class="cipherTextInput" rows="5" cols="50" placeholder="Enter ciphertext to decrypt" autocomplete="off"></textarea><br><br>
+        <h4>Enter private key</h4>
+        <textarea class="privateKeyInput" rows="5" cols="50" placeholder="Enter private key" autocomplete="off"></textarea>
+      </div>
+    </div>
+  
+    <!-- RSA Key Type Selection and Encryption/Decryption Buttons -->
+    <div style="display: flex;">
+      <div style="flex: 1;">
+        <button class="encryptBtn">Encrypt</button>
+      </div>
+  
+      <div style="flex: 1;">
+        <button class="decryptBtn">Decrypt</button>
+      </div>
+    </div>
+  
+    <!-- Encrypted and Decrypted Output Sections -->
+    <div style="display: flex;">
+      <div style="flex: 1;">
+        <h2>Encrypted Output</h2>
+        <textarea class="encryptedResult" rows="5" cols="50" readonly autocomplete="off"></textarea>
+      </div>
+  
+      <div style="flex: 1;">
+        <h2>Decrypted Output</h2>
+        <textarea class="decryptedResult" rows="5" cols="50" readonly autocomplete="off"></textarea>
+      </div>
+    </div>
+</body>
+</html>
